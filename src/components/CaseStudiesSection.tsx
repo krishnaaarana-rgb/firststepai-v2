@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, TrendingUp, Clock, DollarSign, Users, Star } from "lucide-react";
+import { ArrowUpRight, TrendingUp, Clock, DollarSign, Users, Star, ShoppingBag } from "lucide-react";
 import { useState } from "react";
 
 const caseStudies = [
@@ -19,7 +19,6 @@ const caseStudies = [
     quote: "I went from drowning in spreadsheets to actually having time to be in the café with my team. It felt like hiring 2 extra staff.",
     quoteName: "Maria S., Owner",
     timeline: "3 days setup · 1 day training",
-    color: "forest" as const,
   },
   {
     id: 2,
@@ -37,7 +36,6 @@ const caseStudies = [
     quote: "Tax season used to destroy us. This year, my team actually left on time. That's never happened before.",
     quoteName: "David L., Director",
     timeline: "2 days setup · half day training",
-    color: "terracotta" as const,
   },
   {
     id: 3,
@@ -55,7 +53,40 @@ const caseStudies = [
     quote: "I'm an electrician, not an office worker. Now my phone does the admin and I do what I'm good at.",
     quoteName: "Jake R., Owner",
     timeline: "1 day setup · 2 hour training",
-    color: "forest" as const,
+  },
+  {
+    id: 4,
+    badge: "Retail",
+    client: "Bondi Surf Co.",
+    location: "Bondi, NSW",
+    challenge: "A surf shop with an online store struggling to manage customer enquiries, product descriptions, and social media content. The owner was spending evenings writing product copy and replying to DMs.",
+    solution: "Implemented an AI chatbot for customer FAQs, AI-generated product descriptions from photos, and automated social media scheduling with AI-written captions tailored to their brand voice.",
+    tools: ["AI Chatbot", "Product Copy AI", "Social Scheduler"],
+    results: [
+      { icon: ShoppingBag, metric: "45%", label: "Faster product listings" },
+      { icon: Clock, metric: "12 hrs/week", label: "Time saved on content" },
+      { icon: TrendingUp, metric: "22%", label: "Online sales increase" },
+    ],
+    quote: "I used to dread writing product descriptions. Now I snap a photo and the AI nails it every time. My evenings are mine again.",
+    quoteName: "Tom W., Owner",
+    timeline: "2 days setup · 1 day training",
+  },
+  {
+    id: 5,
+    badge: "Health & Wellness",
+    client: "Zen Physio Collective",
+    location: "Auckland, NZ",
+    challenge: "A physiotherapy clinic with 4 practitioners drowning in appointment admin, patient follow-up emails, and treatment note documentation. Practitioners were staying late every day to finish notes.",
+    solution: "Set up AI-powered voice-to-text treatment notes, automated appointment reminders and follow-ups, and an AI assistant that drafts patient exercise plans from consultation summaries.",
+    tools: ["Voice-to-Notes AI", "Smart Reminders", "Exercise Plan Generator"],
+    results: [
+      { icon: Clock, metric: "15 hrs/week", label: "Admin time saved" },
+      { icon: Users, metric: "30%", label: "Fewer no-shows" },
+      { icon: Star, metric: "4.9★", label: "Google review average" },
+    ],
+    quote: "My practitioners actually finish on time now. The voice-to-notes tool alone was worth it — it captures everything we need in seconds.",
+    quoteName: "Dr. Lena M., Director",
+    timeline: "2 days setup · half day training",
   },
 ];
 
@@ -81,7 +112,7 @@ const CaseStudiesSection = () => {
               <span className="text-forest">real transformations</span>
             </h2>
             <p className="text-muted-foreground max-w-sm leading-relaxed">
-              See how we've helped businesses just like yours take their first step into AI — and the results that followed.
+              See how we've helped businesses across Australia & New Zealand take their first step into AI — and the results that followed.
             </p>
           </div>
         </motion.div>
@@ -191,7 +222,7 @@ const CaseStudiesSection = () => {
           transition={{ delay: 0.3 }}
           className="mt-10 text-center"
         >
-          <a href="#cta" className="inline-flex items-center gap-2 text-sm font-heading font-semibold text-forest hover:gap-3 transition-all duration-300">
+          <a href="/contact" className="inline-flex items-center gap-2 text-sm font-heading font-semibold text-forest hover:gap-3 transition-all duration-300">
             Want results like these? Let's talk
             <ArrowUpRight size={15} />
           </a>

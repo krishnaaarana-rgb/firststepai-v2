@@ -12,7 +12,7 @@ const LocationBanner = () => (
     <div className="container-wide py-10 md:py-12 flex flex-col md:flex-row items-center justify-center gap-4 text-center">
       <MapPin className="w-5 h-5 text-forest shrink-0" />
       <p className="text-sm md:text-base text-muted-foreground">
-        Supporting <span className="font-medium text-foreground">Sydney-based businesses</span> initially, with Australia-wide hands-on support coming soon.
+        Supporting <span className="font-medium text-foreground">Australia & New Zealand</span> based businesses with hands-on AI implementation and training.
       </p>
     </div>
   </motion.section>
