@@ -84,7 +84,7 @@ const caseStudies = [
       { icon: Users, metric: "30%", label: "Fewer no-shows" },
       { icon: Star, metric: "4.9★", label: "Google review average" },
     ],
-    quote: "My practitioners actually finish on time now. The voice-to-notes tool alone was worth it — it captures everything we need in seconds.",
+    quote: "My practitioners actually finish on time now. The voice-to-notes tool alone was worth it. It captures everything we need in seconds.",
     quoteName: "Dr. Lena M., Director",
     timeline: "2 days setup · half day training",
   },
@@ -112,7 +112,7 @@ const CaseStudiesSection = () => {
               <span className="text-forest">real transformations</span>
             </h2>
             <p className="text-muted-foreground max-w-sm leading-relaxed">
-              See how we've helped businesses across Australia & New Zealand take their first step into AI — and the results that followed.
+              See how we've helped businesses across Australia & New Zealand take their first step into AI, and the results that followed.
             </p>
           </div>
         </motion.div>

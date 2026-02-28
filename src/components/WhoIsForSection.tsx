@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const points = [
-  { text: "You've been meaning to start with AI but keep putting it off", detail: "We meet you where you are — no judgment, just action." },
+  { text: "You've been meaning to start with AI but keep putting it off", detail: "We meet you where you are. No judgment, just action." },
   { text: "You feel like everyone else has already figured it out", detail: "They haven't. You're earlier than you think." },
   { text: "You don't have time to learn complex tools alone", detail: "That's exactly why we do it with you, not for you to figure out." },
   { text: "You want hands-on help, not a DIY course", detail: "Real people, real setup, real training. Not another login to forget." },

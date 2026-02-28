@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: "What kind of AI tools do you implement?",
-    a: "We focus on proven, easy-to-use tools — think AI writing assistants, automated scheduling, smart email management, and workflow automation. Nothing experimental.",
+    a: "We focus on proven, easy-to-use tools like AI writing assistants, automated scheduling, smart email management, and workflow automation. Nothing experimental.",
   },
   {
     q: "How long does setup typically take?",
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "How much does it cost?",
-    a: "We offer flexible packages based on your business size and needs. Book a free consultation and we'll give you a transparent quote — no hidden fees.",
+    a: "We offer flexible packages based on your business size and needs. Book a free consultation and we'll give you a transparent quote with no hidden fees.",
   },
 ];
 

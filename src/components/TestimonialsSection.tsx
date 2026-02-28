@@ -13,7 +13,7 @@ const testimonials = [
     role: "Property Manager",
   },
   {
-    quote: "No jargon, no pressure — just real help. They understood that we needed simple, not complicated.",
+    quote: "No jargon, no pressure, just real help. They understood that we needed simple, not complicated.",
     name: "Priya K.",
     role: "Accounting Firm Director",
   },

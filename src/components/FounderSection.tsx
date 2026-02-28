@@ -32,7 +32,7 @@ const FounderSection = () => (
             <div className="rounded-2xl overflow-hidden aspect-square">
               <img
                 src={ashleighImg}
-                alt="Ashleigh du Plessis — Founder & Director of First Step AI"
+                alt="Ashleigh du Plessis, Founder and Director of First Step AI"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -69,8 +69,8 @@ const FounderSection = () => (
               hands-on execution to everything she does.
             </p>
             <p>
-              As the General Manager of Two Palms Media — one of Australia's fastest growing marketing
-              agencies — she's led teams of 30+ across Brand Strategy, Social Media, Influencer Marketing,
+              As the General Manager of Two Palms Media, one of Australia's fastest growing marketing
+              agencies, she's led teams of 30+ across Brand Strategy, Social Media, Influencer Marketing,
               PR, and Content Production, supporting some of the largest global B2C brands including
               Netflix ANZ.
             </p>
@@ -81,7 +81,7 @@ const FounderSection = () => (
             </p>
             <p className="font-medium text-foreground border-l-2 border-forest pl-5">
               Ashleigh founded First Step AI to bridge the gap between powerful AI tools and the small
-              businesses that need them most — delivering practical, jargon-free support that gets real results.
+              businesses that need them most, delivering practical, jargon-free support that gets real results.
             </p>
           </div>
 

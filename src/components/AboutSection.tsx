@@ -33,8 +33,8 @@ const AboutSection = () => (
           </p>
           <p>
             We help small business owners take their first step into AI in a simple, supportive way.
-            We work with people who feel like they are falling behind — business owners who keep hearing
-            about AI tools but don't have time or confidence to figure it out alone.
+             We work with people who feel like they are falling behind. Business owners who keep hearing
+             about AI tools but don't have time or confidence to figure it out alone.
           </p>
           <p>
             We're not here for advanced implementations or large-scale transformation. We help everyday

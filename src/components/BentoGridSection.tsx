@@ -5,7 +5,7 @@ const features = [
   {
     icon: Cpu,
     title: "AI-first approach",
-    desc: "Every recommendation is grounded in practical AI that works today — not theoretical promises.",
+    desc: "Every recommendation is grounded in practical AI that works today. Not theoretical promises.",
     span: "md:col-span-2 md:row-span-1",
     highlight: true,
   },
@@ -30,7 +30,7 @@ const features = [
   {
     icon: BarChart3,
     title: "Measurable ROI",
-    desc: "We track time saved, costs reduced, and revenue gained — so you always know the value.",
+    desc: "We track time saved, costs reduced, and revenue gained so you always know the value.",
     span: "md:col-span-1",
     highlight: true,
   },
