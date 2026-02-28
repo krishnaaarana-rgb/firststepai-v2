@@ -13,7 +13,7 @@ const FooterSection = () => (
           </Link>
           <p className="mt-3 text-sm text-muted-foreground max-w-sm leading-relaxed">
             Hands-on AI setup and training for small businesses across Australia & New Zealand.
-            No tech overwhelm — just results.
+            No tech overwhelm. Just results.
           </p>
           <a
             href="mailto:info@firststepai.com.au"

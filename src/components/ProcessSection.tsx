@@ -15,7 +15,7 @@ const steps = [
   {
     num: "03",
     title: "Implementation",
-    desc: "We set everything up for you — installed, configured, and integrated into your existing systems.",
+    desc: "We set everything up for you. Installed, configured, and integrated into your existing systems.",
   },
   {
     num: "04",

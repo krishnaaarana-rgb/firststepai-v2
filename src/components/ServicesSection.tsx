@@ -12,7 +12,7 @@ const cards = [
     icon: Sparkles,
     num: "02",
     title: "Proven AI tools",
-    description: "Trusted, easy tools with immediate impact. No experimental tech — only what works.",
+    description: "Trusted, easy tools with immediate impact. No experimental tech. Only what works.",
   },
   {
     icon: Users,
@@ -44,7 +44,7 @@ const ServicesSection = () => (
           transition={{ duration: 0.5, delay: 0.15 }}
           className="text-muted-foreground max-w-sm leading-relaxed"
         >
-          We focus on practical, immediate impact — not complex strategies that take months to see results.
+          We focus on practical, immediate impact. Not complex strategies that take months to see results.
         </motion.p>
       </div>
 

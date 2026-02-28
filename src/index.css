@@ -66,21 +66,29 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
     @apply bg-background text-foreground font-body antialiased;
-    line-height: 1.65;
+    line-height: 1.7;
+    font-feature-settings: "kern" 1, "liga" 1;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-bold;
-    line-height: 1.08;
-    letter-spacing: -0.03em;
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+  }
+
+  p {
+    letter-spacing: 0.005em;
   }
 
   ::selection {
-    background: hsl(var(--forest) / 0.15);
+    background: hsl(var(--forest) / 0.12);
+    color: hsl(var(--foreground));
   }
 }
 
@@ -106,30 +114,46 @@
   }
 
   .badge {
-    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium tracking-wide uppercase;
+    @apply inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-[0.12em] uppercase;
     background: hsl(var(--forest-light));
     color: hsl(var(--forest));
+    letter-spacing: 0.12em;
   }
 
   .badge-dark {
-    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium tracking-wide uppercase;
-    background: hsl(var(--primary-foreground) / 0.1);
-    color: hsl(var(--primary-foreground) / 0.8);
+    @apply inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-[0.12em] uppercase;
+    background: hsl(var(--primary-foreground) / 0.08);
+    color: hsl(var(--primary-foreground) / 0.75);
   }
 
   .cta-button {
-    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-heading font-semibold text-sm tracking-tight transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-heading font-semibold text-sm tracking-tight transition-all duration-500;
     background: hsl(var(--terracotta));
     color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 30%, hsl(0 0% 100% / 0.15) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.7s ease;
+  }
+
+  .cta-button:hover::before {
+    transform: translateX(100%);
   }
 
   .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 35px hsl(var(--terracotta) / 0.3);
+    box-shadow: 0 16px 40px hsl(var(--terracotta) / 0.25), 0 0 0 1px hsl(var(--terracotta) / 0.1);
   }
 
   .cta-button-outline {
-    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-heading font-semibold text-sm tracking-tight transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-heading font-semibold text-sm tracking-tight transition-all duration-500;
     background: transparent;
     color: hsl(var(--foreground));
     border: 1.5px solid hsl(var(--border));
@@ -138,23 +162,27 @@
   .cta-button-outline:hover {
     border-color: hsl(var(--foreground));
     transform: translateY(-2px);
+    box-shadow: 0 8px 30px hsl(var(--ink) / 0.06);
   }
 
   .editorial-card {
-    @apply relative rounded-2xl p-8 md:p-10 transition-all duration-500;
+    @apply relative rounded-2xl p-8 md:p-10 transition-all duration-700;
     background: hsl(var(--warm-white));
     border: 1px solid hsl(var(--border));
   }
 
   .editorial-card:hover {
-    border-color: hsl(var(--forest) / 0.25);
-    box-shadow: 0 20px 60px hsl(var(--ink) / 0.06);
-    transform: translateY(-4px);
+    border-color: hsl(var(--forest) / 0.2);
+    box-shadow: 
+      0 1px 2px hsl(var(--ink) / 0.04),
+      0 8px 24px hsl(var(--ink) / 0.04),
+      0 24px 64px hsl(var(--ink) / 0.03);
+    transform: translateY(-6px);
   }
 
   /* Futuristic glow card */
   .glow-card {
-    @apply relative rounded-2xl overflow-hidden transition-all duration-500;
+    @apply relative rounded-2xl overflow-hidden transition-all duration-700;
     background: hsl(var(--warm-white));
     border: 1px solid hsl(var(--border));
   }
@@ -165,12 +193,12 @@
     inset: -1px;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, transparent 40%, hsl(var(--glow-forest) / 0.4), hsl(var(--glow-terracotta) / 0.3), transparent 60%);
+    background: linear-gradient(135deg, transparent 30%, hsl(var(--glow-forest) / 0.5), hsl(var(--glow-terracotta) / 0.35), transparent 70%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     opacity: 0;
-    transition: opacity 0.6s;
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .glow-card:hover::before {
@@ -178,8 +206,11 @@
   }
 
   .glow-card:hover {
-    box-shadow: 0 0 50px hsl(var(--glow-forest) / 0.06), 0 20px 60px hsl(var(--ink) / 0.06);
-    transform: translateY(-4px);
+    box-shadow: 
+      0 0 60px hsl(var(--glow-forest) / 0.05),
+      0 1px 2px hsl(var(--ink) / 0.04),
+      0 24px 64px hsl(var(--ink) / 0.05);
+    transform: translateY(-6px);
   }
 
   /* Aurora gradient background */
@@ -193,23 +224,24 @@
     position: absolute;
     inset: 0;
     background: 
-      radial-gradient(ellipse 60% 50% at 20% 50%, hsl(var(--glow-forest) / 0.08), transparent),
-      radial-gradient(ellipse 50% 60% at 80% 30%, hsl(var(--glow-terracotta) / 0.06), transparent),
-      radial-gradient(ellipse 40% 40% at 50% 80%, hsl(var(--sage) / 0.08), transparent);
-    animation: aurora-drift 12s ease-in-out infinite alternate;
+      radial-gradient(ellipse 60% 50% at 20% 50%, hsl(var(--glow-forest) / 0.06), transparent),
+      radial-gradient(ellipse 50% 60% at 80% 30%, hsl(var(--glow-terracotta) / 0.04), transparent),
+      radial-gradient(ellipse 40% 40% at 50% 80%, hsl(var(--sage) / 0.06), transparent);
+    animation: aurora-drift 16s ease-in-out infinite alternate;
     pointer-events: none;
   }
 
   @keyframes aurora-drift {
     0% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(-2%, 3%) scale(1.02); }
-    100% { transform: translate(2%, -2%) scale(1); }
+    33% { transform: translate(-1.5%, 2%) scale(1.01); }
+    66% { transform: translate(1%, -1.5%) scale(1.02); }
+    100% { transform: translate(1.5%, -1%) scale(1); }
   }
 
   /* Orbital decoration */
   .orbital-ring {
     @apply absolute rounded-full border pointer-events-none;
-    border-color: hsl(var(--forest) / 0.06);
+    border-color: hsl(var(--forest) / 0.04);
   }
 
   /* Noise texture overlay */
@@ -217,7 +249,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    opacity: 0.025;
+    opacity: 0.02;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     pointer-events: none;
     mix-blend-mode: multiply;
@@ -247,7 +279,14 @@
 
   /* Large outline text */
   .outline-text {
-    -webkit-text-stroke: 1.5px hsl(var(--foreground) / 0.12);
+    -webkit-text-stroke: 1px hsl(var(--foreground) / 0.08);
     color: transparent;
+  }
+
+  /* Sophisticated section divider */
+  .section-divider {
+    @apply w-full relative;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--border)), hsl(var(--forest) / 0.15), hsl(var(--border)), transparent);
   }
 }
