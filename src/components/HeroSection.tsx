@@ -110,7 +110,7 @@ const HeroSection = () => {
             <img
               src={heroIllustration}
               alt="Person celebrating AI success"
-              className="w-[420px] h-auto rounded-2xl"
+              className="w-[420px] h-auto"
               style={{ mixBlendMode: "multiply" }}
             />
           </motion.div>
