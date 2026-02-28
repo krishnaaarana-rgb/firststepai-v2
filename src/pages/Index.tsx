@@ -3,7 +3,9 @@ import HeroSection from "@/components/HeroSection";
 import TrustBand from "@/components/TrustBand";
 import ServicesSection from "@/components/ServicesSection";
 import StatsSection from "@/components/StatsSection";
+import CaseStudiesSection from "@/components/CaseStudiesSection";
 import AboutSection from "@/components/AboutSection";
+import BentoGridSection from "@/components/BentoGridSection";
 import WhoIsForSection from "@/components/WhoIsForSection";
 import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -20,7 +22,9 @@ const Index = () => {
       <TrustBand />
       <ServicesSection />
       <StatsSection />
+      <CaseStudiesSection />
       <AboutSection />
+      <BentoGridSection />
       <WhoIsForSection />
       <ProcessSection />
       <TestimonialsSection />

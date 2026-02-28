@@ -9,17 +9,27 @@ const CTASection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
-        className="relative bg-primary text-primary-foreground rounded-3xl px-8 py-16 md:px-16 md:py-24 overflow-hidden"
+        className="relative bg-primary text-primary-foreground rounded-3xl px-8 py-16 md:px-16 md:py-24 overflow-hidden noise-overlay"
       >
-        {/* Decorative circles */}
-        <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full border border-primary-foreground/10" />
-        <div className="absolute -bottom-16 -left-16 w-48 h-48 rounded-full border border-primary-foreground/5" />
+        {/* Decorative rings */}
+        <div className="orbital-ring w-[400px] h-[400px] -top-[150px] -right-[150px]" style={{ borderColor: "hsl(var(--primary-foreground) / 0.06)" }} />
+        <div className="orbital-ring w-[300px] h-[300px] -bottom-[100px] -left-[100px]" style={{ borderColor: "hsl(var(--primary-foreground) / 0.04)" }} />
+
+        {/* Glow spots */}
+        <div className="absolute top-1/4 right-1/4 w-32 h-32 rounded-full animate-pulse-glow" style={{ background: "hsl(var(--glow-forest) / 0.1)", filter: "blur(40px)" }} />
 
         <div className="relative z-10 max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading mb-5">
-            Ready to take your first step?
-          </h2>
-          <p className="text-primary-foreground/70 text-lg mb-10 max-w-md mx-auto leading-relaxed">
+          <motion.div
+            initial={{ scale: 0.9 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl lg:text-[3.5rem] font-heading mb-5 leading-[1.05]">
+              Ready to take your<br />first step?
+            </h2>
+          </motion.div>
+          <p className="text-primary-foreground/60 text-lg mb-10 max-w-md mx-auto leading-relaxed">
             Book a free, no-pressure consultation and see how AI can simplify your workday.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -30,7 +40,7 @@ const CTASection = () => (
               Book your free consultation
               <ArrowUpRight size={15} />
             </a>
-            <span className="text-primary-foreground/40 text-sm">No commitment required</span>
+            <span className="text-primary-foreground/30 text-sm">No commitment required</span>
           </div>
         </div>
       </motion.div>
