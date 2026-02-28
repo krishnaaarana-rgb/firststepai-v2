@@ -8,6 +8,7 @@ import AboutSection from "@/components/AboutSection";
 import FounderSection from "@/components/FounderSection";
 import BentoGridSection from "@/components/BentoGridSection";
 import WhoIsForSection from "@/components/WhoIsForSection";
+import WeBelieveSection from "@/components/WeBelieveSection";
 import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import LocationBanner from "@/components/LocationBanner";
@@ -32,7 +33,7 @@ const Index = () => {
       <TestimonialsSection />
       <LocationBanner />
       <FAQSection />
-      <CTASection />
+      <WeBelieveSection />
       <FooterSection />
     </div>
   );

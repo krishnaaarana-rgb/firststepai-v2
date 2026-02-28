@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 const AboutSection = () => (
-  <section id="about" className="section-padding overflow-hidden">
-    <div className="container-wide">
-      <div className="grid lg:grid-cols-12 gap-12 lg:gap-8">
-        {/* Left - editorial heading */}
+  <section id="about" className="section-padding overflow-hidden aurora-bg noise-overlay">
+    <div className="container-wide relative z-10">
+      <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
+        {/* Left */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -14,13 +14,13 @@ const AboutSection = () => (
         >
           <span className="badge mb-6 block w-fit">About us</span>
           <h2 className="text-3xl md:text-4xl lg:text-[3.2rem] font-heading leading-[1.05] mb-6">
-            We help everyday teams{" "}
-            <span className="text-forest">start with AI</span>
+            We've been in{" "}
+            <span className="text-forest">your shoes</span>
           </h2>
           <div className="w-16 h-0.5 bg-forest rounded-full origin-left animate-line-grow" />
         </motion.div>
 
-        {/* Right - body copy */}
+        {/* Right */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,17 +28,18 @@ const AboutSection = () => (
           transition={{ duration: 0.7, delay: 0.15 }}
           className="lg:col-span-6 lg:col-start-7 space-y-6 text-muted-foreground leading-[1.75]"
         >
-          <p className="text-foreground text-lg font-medium leading-relaxed">
-            Most AI companies focus on complex strategies and custom builds. We focus on something different.
+          <p className="text-foreground text-lg md:text-xl font-heading font-medium leading-relaxed italic">
+            At First Step AI, we exist because learning AI shouldn't be a solo journey.
           </p>
           <p>
-            We help small business owners take their first step into AI in a simple, supportive way.
-             We work with people who feel like they are falling behind. Business owners who keep hearing
-             about AI tools but don't have time or confidence to figure it out alone.
+            As the former GM of a small to medium sized agency, I know how tough it is to
+            evaluate tools, set them up, and train a team to actually use them. I had to
+            make the time to learn AI on my own and realised most small business
+            owners simply don't have that luxury.
           </p>
           <p>
-            We're not here for advanced implementations or large-scale transformation. We help everyday
-            teams install and use easy AI tools that save time, reduce admin, and make work easier.
+            That's why I started First Step AI: to give everyday businesses the ability to
+            take their first step into AI, without needing to learn everything themselves.
           </p>
           <p className="font-medium text-foreground border-l-2 border-forest pl-5">
             No jargon. No pressure. No complicated tech. Just practical support so you can start using AI confidently.
