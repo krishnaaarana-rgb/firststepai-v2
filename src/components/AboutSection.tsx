@@ -47,6 +47,7 @@ const AboutSection = () => (
                 src={aboutIllustration}
                 alt="Business person working at their desk"
                 className="w-[280px] h-auto"
+                style={{ mixBlendMode: "multiply" }}
               />
             </div>
           </div>
