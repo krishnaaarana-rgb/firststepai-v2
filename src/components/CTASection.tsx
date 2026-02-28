@@ -34,7 +34,7 @@ const CTASection = () => (
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="mailto:hello@firststepaai.com"
+              href="mailto:info@firststepai.com.au"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary-foreground text-primary font-heading font-semibold text-sm hover:shadow-lg hover:scale-[1.03] transition-all duration-300"
             >
               Book your free consultation

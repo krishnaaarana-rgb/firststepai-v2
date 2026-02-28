@@ -123,11 +123,11 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 1.4 }}
             className="flex flex-wrap gap-4"
           >
-            <a href="#cta" className="cta-button">
+            <a href="/contact" className="cta-button">
               Book your free consultation
               <ArrowUpRight size={16} />
             </a>
-            <a href="#services" className="cta-button-outline">
+            <a href="/services" className="cta-button-outline">
               See how we help
             </a>
           </motion.div>
