@@ -93,12 +93,22 @@ export default {
           from: { transform: "scaleX(0)" },
           to: { transform: "scaleX(1)" },
         },
+        "orbit": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { opacity: "0.4" },
+          "50%": { opacity: "0.8" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "marquee": "marquee 30s linear infinite",
         "line-grow": "line-grow 1s cubic-bezier(0.65,0,0.35,1) forwards",
+        "orbit": "orbit 20s linear infinite",
+        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
       },
     },
   },
