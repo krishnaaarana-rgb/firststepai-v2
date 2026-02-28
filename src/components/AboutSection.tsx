@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import aboutIllustration from "@/assets/about-illustration.png";
+import { Heart, Zap, Shield, Users } from "lucide-react";
+
+const values = [
+  { icon: Heart, label: "Human-first", desc: "Tech should serve people, not the other way around" },
+  { icon: Zap, label: "Immediate impact", desc: "Results from day one, not months down the line" },
+  { icon: Shield, label: "No jargon", desc: "Plain English, always" },
+  { icon: Users, label: "Your team grows", desc: "We teach, not just implement" },
+];
 
 const AboutSection = () => (
   <section id="about" className="section-padding overflow-hidden aurora-bg noise-overlay">
@@ -33,23 +40,32 @@ const AboutSection = () => (
           </p>
         </motion.div>
 
-        {/* Right - illustration */}
+        {/* Right - interactive values grid */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="lg:col-span-5 flex justify-center"
+          className="lg:col-span-5"
         >
-          <div className="relative">
-            <div className="rounded-2xl overflow-hidden p-8 flex items-center justify-center">
-              <img
-                src={aboutIllustration}
-                alt="Business person working at their desk"
-                className="w-[280px] h-auto"
-                style={{ mixBlendMode: "multiply" }}
-              />
-            </div>
+          <div className="grid grid-cols-2 gap-3">
+            {values.map((value, i) => (
+              <motion.div
+                key={value.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
+                whileHover={{ y: -4, transition: { duration: 0.25 } }}
+                className="rounded-xl border border-border/60 bg-card/50 backdrop-blur-sm p-5 cursor-default group"
+              >
+                <div className="w-9 h-9 rounded-lg bg-forest-light flex items-center justify-center mb-3 group-hover:bg-forest group-hover:text-primary-foreground transition-all duration-300">
+                  <value.icon className="w-4 h-4" />
+                </div>
+                <h4 className="font-heading font-bold text-foreground text-sm mb-1">{value.label}</h4>
+                <p className="text-xs text-muted-foreground leading-relaxed">{value.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>
