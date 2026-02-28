@@ -42,7 +42,7 @@ const AboutSection = () => (
           className="lg:col-span-5 flex justify-center"
         >
           <div className="relative">
-            <div className="rounded-2xl overflow-hidden bg-primary p-8 flex items-center justify-center">
+            <div className="rounded-2xl overflow-hidden p-8 flex items-center justify-center">
               <img
                 src={aboutIllustration}
                 alt="Business person working at their desk"
