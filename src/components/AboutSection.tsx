@@ -3,49 +3,45 @@ import { motion } from "framer-motion";
 const AboutSection = () => (
   <section id="about" className="section-padding overflow-hidden">
     <div className="container-wide">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-        {/* Left - gradient headline */}
+      <div className="grid lg:grid-cols-12 gap-12 lg:gap-8">
+        {/* Left - editorial heading */}
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="relative"
+          transition={{ duration: 0.7 }}
+          className="lg:col-span-5"
         >
-          <div className="gradient-lavender-peach rounded-3xl p-10 md:p-14 lg:sticky lg:top-28">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading leading-[1.15]">
-              We help everyday teams start with AI
-            </h2>
-          </div>
+          <span className="badge mb-6 block w-fit">About us</span>
+          <h2 className="text-3xl md:text-4xl lg:text-[3.2rem] font-heading leading-[1.05] mb-6">
+            We help everyday teams{" "}
+            <span className="text-forest">start with AI</span>
+          </h2>
+          <div className="w-16 h-0.5 bg-forest rounded-full origin-left animate-line-grow" />
         </motion.div>
 
         {/* Right - body copy */}
         <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.15 }}
-          className="space-y-5 text-muted-foreground leading-relaxed"
+          transition={{ duration: 0.7, delay: 0.15 }}
+          className="lg:col-span-6 lg:col-start-7 space-y-6 text-muted-foreground leading-[1.75]"
         >
-          <p>
-            Most AI companies focus on complex strategies and custom builds.
-            First Step AI focuses on something different. We help small
-            business owners take their first step into AI in a simple,
-            supportive way.
+          <p className="text-foreground text-lg font-medium leading-relaxed">
+            Most AI companies focus on complex strategies and custom builds. We focus on something different.
           </p>
           <p>
-            We work with people who feel like they are falling behind. Business
-            owners who keep hearing about AI tools but don't have time or
-            confidence to figure it out alone.
+            We help small business owners take their first step into AI in a simple, supportive way.
+            We work with people who feel like they are falling behind — business owners who keep hearing
+            about AI tools but don't have time or confidence to figure it out alone.
           </p>
           <p>
-            We're not here for advanced implementations or large-scale
-            transformation. We help everyday teams install and use easy AI
-            tools that save time, reduce admin, and make work easier.
+            We're not here for advanced implementations or large-scale transformation. We help everyday
+            teams install and use easy AI tools that save time, reduce admin, and make work easier.
           </p>
-          <p className="font-medium text-foreground">
-            No jargon. No pressure. No complicated tech. Just practical
-            support so you can start using AI confidently.
+          <p className="font-medium text-foreground border-l-2 border-forest pl-5">
+            No jargon. No pressure. No complicated tech. Just practical support so you can start using AI confidently.
           </p>
         </motion.div>
       </div>
