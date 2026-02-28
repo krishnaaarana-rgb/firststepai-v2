@@ -1,9 +1,18 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, ArrowDown } from "lucide-react";
-import heroIllustration from "@/assets/hero-illustration.png";
+import { useState, useEffect } from "react";
 
 const line1 = "AI made simple,";
 const line2 = "for your business.";
+
+const useCases = [
+  { label: "Automate customer support", icon: "💬" },
+  { label: "Generate reports in seconds", icon: "📊" },
+  { label: "Streamline onboarding", icon: "🚀" },
+  { label: "Summarise long documents", icon: "📄" },
+  { label: "Build internal tools faster", icon: "⚡" },
+  { label: "Predict trends & insights", icon: "🔮" },
+];
 
 const letterVariants = {
   hidden: { opacity: 0, y: 60, rotateX: -40 },
@@ -20,6 +29,15 @@ const letterVariants = {
 };
 
 const HeroSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % useCases.length);
+    }, 2800);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="home" className="relative min-h-[100svh] flex flex-col justify-center pt-20 pb-12 overflow-hidden bg-background aurora-bg noise-overlay">
       <div className="container-wide relative z-10">
@@ -102,17 +120,39 @@ const HeroSection = () => {
 
           {/* Illustration */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="hidden lg:flex justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="hidden lg:flex flex-col items-center justify-center"
           >
-            <img
-              src={heroIllustration}
-              alt="Person celebrating AI success"
-              className="w-[420px] h-auto"
-              style={{ mixBlendMode: "multiply" }}
-            />
+            <div className="relative w-full max-w-md">
+              <div className="rounded-2xl border border-border/60 bg-card/50 backdrop-blur-sm p-8 shadow-lg">
+                <p className="text-xs uppercase tracking-widest text-muted-foreground mb-5 font-medium">What AI can do for you</p>
+                <div className="relative h-16 overflow-hidden">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={currentIndex}
+                      initial={{ opacity: 0, y: 24 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -24 }}
+                      transition={{ duration: 0.4, ease: "easeInOut" }}
+                      className="absolute inset-0 flex items-center gap-4"
+                    >
+                      <span className="text-3xl">{useCases[currentIndex].icon}</span>
+                      <span className="text-xl font-heading font-semibold text-foreground">{useCases[currentIndex].label}</span>
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+                <div className="flex gap-1.5 mt-6">
+                  {useCases.map((_, i) => (
+                    <div
+                      key={i}
+                      className={`h-1 rounded-full transition-all duration-300 ${i === currentIndex ? "w-6 bg-forest" : "w-1.5 bg-border"}`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
 
