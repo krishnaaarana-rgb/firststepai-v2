@@ -1,40 +1,32 @@
-import { motion } from "framer-motion";
-
 const items = [
   "Sydney-based",
   "Hands-on support",
   "No jargon",
   "Real results",
+  "Trusted tools",
+  "Team training",
   "Sydney-based",
   "Hands-on support",
   "No jargon",
   "Real results",
+  "Trusted tools",
+  "Team training",
 ];
 
 const TrustBand = () => (
-  <motion.section
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-50px" }}
-    transition={{ duration: 0.6 }}
-    className="py-8 md:py-10"
-  >
-    <div className="container-wide">
-      <div className="bg-peach rounded-2xl shadow-soft overflow-hidden py-5">
-        <div className="flex animate-scroll-x whitespace-nowrap">
-          {items.map((item, i) => (
-            <span
-              key={i}
-              className="inline-flex items-center gap-3 px-8 text-sm md:text-base font-medium text-foreground/80"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-coral inline-block" />
-              {item}
-            </span>
-          ))}
-        </div>
-      </div>
+  <section className="py-6 overflow-hidden border-y border-border">
+    <div className="flex animate-marquee whitespace-nowrap">
+      {items.map((item, i) => (
+        <span
+          key={i}
+          className="inline-flex items-center gap-4 px-10 text-[13px] font-heading font-medium text-muted-foreground uppercase tracking-[0.15em]"
+        >
+          <span className="w-1 h-1 rounded-full bg-forest inline-block" />
+          {item}
+        </span>
+      ))}
     </div>
-  </motion.section>
+  </section>
 );
 
 export default TrustBand;
