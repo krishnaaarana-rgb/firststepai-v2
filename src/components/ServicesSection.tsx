@@ -1,5 +1,24 @@
 import { motion } from "framer-motion";
-import { Wrench, Sparkles, Users, ArrowRight } from "lucide-react";
+import { Wrench, Sparkles, Users, CheckCircle, Target, HandMetal } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const features = [
+  {
+    icon: CheckCircle,
+    title: "Plain-English guidance",
+    desc: "No jargon, just what to use and how.",
+  },
+  {
+    icon: Target,
+    title: "On-site setup",
+    desc: "We come to you and configure everything.",
+  },
+  {
+    icon: HandMetal,
+    title: "Hands-on training",
+    desc: "Your team learns by doing.",
+  },
+];
 
 const cards = [
   {
@@ -48,7 +67,7 @@ const ServicesSection = () => (
         </motion.p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
+      <div className="grid md:grid-cols-3 gap-5 lg:gap-6 mb-20">
         {cards.map((card, i) => (
           <motion.div
             key={card.title}
@@ -65,15 +84,59 @@ const ServicesSection = () => (
               <span className="text-sm font-heading text-muted-foreground/50 font-medium">{card.num}</span>
             </div>
             <h3 className="text-xl font-heading font-bold mb-3 text-foreground">{card.title}</h3>
-            <p className="text-muted-foreground leading-relaxed text-[15px] mb-6">
+            <p className="text-muted-foreground leading-relaxed text-[15px]">
               {card.description}
             </p>
-            <div className="flex items-center gap-2 text-sm font-medium text-forest opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              Learn more <ArrowRight size={14} />
-            </div>
           </motion.div>
         ))}
       </div>
+
+      {/* Feature highlights inspired by Figma reference */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
+      >
+        <div className="glow-card p-8 md:p-10">
+          <div className="space-y-6">
+            {features.map((feature, i) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+                className="flex items-start gap-4"
+              >
+                <div className="w-10 h-10 rounded-lg bg-forest-light flex items-center justify-center shrink-0">
+                  <feature.icon className="w-4 h-4 text-forest" />
+                </div>
+                <div>
+                  <h4 className="font-heading font-bold text-foreground text-sm mb-0.5">{feature.title}</h4>
+                  <p className="text-sm text-muted-foreground">{feature.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-2xl md:text-3xl lg:text-[2.2rem] font-heading leading-[1.1] mb-5">
+            Know that AI could significantly help your team, but don't know where to start?
+          </h3>
+          <p className="text-muted-foreground leading-relaxed mb-8">
+            If you're overwhelmed by tech jargon or don't know where to start, you're not alone. First Step AI removes the complexity with in-person setup and team training, giving you practical results from day one.
+          </p>
+          <Link
+            to="/contact"
+            className="cta-button inline-flex"
+          >
+            Book your free call
+          </Link>
+        </div>
+      </motion.div>
     </div>
   </section>
 );
