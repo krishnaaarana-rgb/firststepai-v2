@@ -37,7 +37,7 @@ const HeroSection = () => {
               </span>
             </motion.div>
 
-            <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-heading font-bold leading-[0.95] mb-8" style={{ wordBreak: "keep-all", overflowWrap: "normal" }}>
+            <h1 className="text-[clamp(2.4rem,5.5vw,4.5rem)] font-heading font-bold leading-[0.95] mb-8" style={{ wordBreak: "keep-all", overflowWrap: "normal" }}>
               <span className="block overflow-hidden">
                 {line1.split("").map((char, i) => (
                   <motion.span
@@ -110,7 +110,8 @@ const HeroSection = () => {
             <img
               src={heroIllustration}
               alt="Person celebrating AI success"
-              className="w-[380px] h-auto rounded-2xl bg-background"
+              className="w-[420px] h-auto"
+              style={{ background: "transparent", mixBlendMode: "multiply" }}
             />
           </motion.div>
         </div>
