@@ -106,15 +106,13 @@ const CaseStudiesSection = () => {
           className="mb-16 md:mb-20"
         >
           <span className="badge mb-4 block w-fit">Case Studies</span>
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-            <h2 className="text-3xl md:text-4xl lg:text-[3.5rem] font-heading max-w-xl">
+          <h2 className="text-3xl md:text-4xl lg:text-[3.5rem] font-heading" style={{ wordBreak: "keep-all" }}>
               Real businesses,{" "}
               <span className="text-forest">real transformations</span>
-            </h2>
-            <p className="text-muted-foreground max-w-sm leading-relaxed">
+          </h2>
+          <p className="text-muted-foreground max-w-lg leading-relaxed mt-4">
               See how we've helped businesses across Australia & New Zealand take their first step into AI, and the results that followed.
-            </p>
-          </div>
+          </p>
         </motion.div>
 
         {/* Case study selector tabs */}
