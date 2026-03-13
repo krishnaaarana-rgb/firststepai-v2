@@ -44,7 +44,7 @@ const cards = [
 const ServicesSection = () => (
   <section id="services" className="section-padding">
     <div className="container-wide">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16 md:mb-20">
+      <div className="mb-16 md:mb-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ const ServicesSection = () => (
           transition={{ duration: 0.6 }}
         >
           <span className="badge mb-4 block w-fit">Services</span>
-          <h2 className="text-3xl md:text-4xl lg:text-[3.5rem] font-heading max-w-lg">
+          <h2 className="text-3xl md:text-4xl lg:text-[3.5rem] font-heading whitespace-nowrap" style={{ wordBreak: "keep-all" }}>
             How we help your business
           </h2>
         </motion.div>
@@ -61,7 +61,7 @@ const ServicesSection = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="text-muted-foreground max-w-sm leading-relaxed"
+          className="text-muted-foreground max-w-lg leading-relaxed mt-4"
         >
           We focus on practical, immediate impact. Not complex strategies that take months to see results.
         </motion.p>
