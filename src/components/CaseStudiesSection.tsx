@@ -188,6 +188,10 @@ const CaseStudiesSection = () => {
               ))}
             </div>
 
+            <p className="text-[11px] text-muted-foreground/60 italic mb-10">
+              * All costs are approximate and vary based on project complexity, integrations, and scope. Figures shown in AUD.
+            </p>
+
             <div className="border-l-2 border-teal pl-6 py-2">
               <blockquote className="text-foreground text-lg md:text-xl font-medium leading-relaxed italic mb-3">
                 "{study.quote}"
