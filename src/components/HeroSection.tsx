@@ -39,7 +39,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-[100svh] flex flex-col justify-center pt-20 pb-12 overflow-hidden bg-background aurora-bg noise-overlay">
+    <section id="home" className="relative min-h-[100svh] flex flex-col justify-center pt-20 pb-12 overflow-hidden bg-gradient-hero aurora-bg noise-overlay">
       <div className="container-wide relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -50,7 +50,7 @@ const HeroSection = () => {
               className="mb-8"
             >
               <span className="badge">
-                <span className="w-1.5 h-1.5 rounded-full bg-forest animate-pulse-glow inline-block" />
+                <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse-glow inline-block" />
                 AI Consulting · Australia & New Zealand
               </span>
             </motion.div>
@@ -79,7 +79,7 @@ const HeroSection = () => {
                     variants={letterVariants}
                     initial="hidden"
                     animate="visible"
-                    className="inline-block text-forest"
+                    className="inline-block gradient-text"
                     style={{ transformOrigin: "bottom" }}
                   >
                     {char === " " ? "\u00A0" : char}
@@ -126,7 +126,7 @@ const HeroSection = () => {
             className="hidden lg:flex flex-col items-center justify-center"
           >
             <div className="relative w-full max-w-md">
-              <div className="rounded-2xl border border-border/60 bg-card/50 backdrop-blur-sm p-8 shadow-lg">
+              <div className="glow-card p-8">
                 <p className="text-xs uppercase tracking-widest text-muted-foreground mb-5 font-medium">What AI can do for you</p>
                 <div className="relative h-16 overflow-hidden">
                   <AnimatePresence mode="wait">
@@ -147,7 +147,7 @@ const HeroSection = () => {
                   {useCases.map((_, i) => (
                     <div
                       key={i}
-                      className={`h-1 rounded-full transition-all duration-300 ${i === currentIndex ? "w-6 bg-forest" : "w-1.5 bg-border"}`}
+                      className={`h-1 rounded-full transition-all duration-300 ${i === currentIndex ? "w-6 bg-teal" : "w-1.5 bg-steel/30"}`}
                     />
                   ))}
                 </div>

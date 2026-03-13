@@ -22,7 +22,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Handle hash scrolling after navigation
   useEffect(() => {
     if (location.hash) {
       const el = document.querySelector(location.hash);
@@ -57,9 +56,10 @@ const Navbar = () => {
         transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-background/90 backdrop-blur-xl border-b border-border"
+            ? "backdrop-blur-md border-b"
             : "bg-transparent"
         }`}
+        style={scrolled ? { backgroundColor: 'rgba(13, 27, 42, 0.85)', borderColor: 'rgba(27, 73, 101, 0.3)' } : undefined}
       >
         <nav className="container-wide flex items-center justify-between h-16 md:h-[72px]">
           <Link to="/" className="flex items-center gap-2">
@@ -70,7 +70,7 @@ const Navbar = () => {
             {navLinks.map((link) =>
               renderLink(
                 link,
-                "relative text-[13px] font-medium text-muted-foreground hover:text-foreground transition-colors duration-300 uppercase tracking-widest"
+                "relative text-[13px] font-medium text-muted-foreground hover:text-teal transition-colors duration-300 uppercase tracking-widest"
               )
             )}
           </div>
@@ -99,7 +99,7 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-background flex flex-col justify-center px-8 md:hidden"
+            className="fixed inset-0 z-40 bg-navy flex flex-col justify-center px-8 md:hidden"
           >
             <div className="space-y-1">
               {navLinks.map((link, i) => (
@@ -111,7 +111,7 @@ const Navbar = () => {
                 >
                   {renderLink(
                     link,
-                    "block text-4xl font-heading font-bold text-foreground py-3 border-b border-border",
+                    "block text-4xl font-heading font-bold text-foreground py-3 border-b border-steel/30",
                     () => setMobileOpen(false)
                   )}
                 </motion.div>

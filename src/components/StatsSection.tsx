@@ -33,7 +33,6 @@ const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
 
 const StatsSection = () => (
   <section className="py-20 md:py-28 relative overflow-hidden">
-    {/* Background large outline text */}
     <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
       <span className="outline-text text-[12rem] md:text-[18rem] font-heading font-bold opacity-40 whitespace-nowrap">
         RESULTS
@@ -51,8 +50,10 @@ const StatsSection = () => (
             transition={{ duration: 0.6, delay: i * 0.1 }}
             className="glow-card p-6 md:p-8 text-center group"
           >
-            <div className="w-10 h-10 rounded-lg bg-forest-light flex items-center justify-center mx-auto mb-4 group-hover:bg-forest group-hover:text-primary-foreground transition-all duration-500">
-              <stat.icon className="w-4 h-4" />
+            <div className="w-10 h-10 rounded-lg flex items-center justify-center mx-auto mb-4 transition-all duration-500"
+              style={{ background: 'rgba(0, 166, 166, 0.1)' }}
+            >
+              <stat.icon className="w-4 h-4 text-teal" />
             </div>
             <div className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-2">
               <Counter target={stat.value} suffix={stat.suffix} />

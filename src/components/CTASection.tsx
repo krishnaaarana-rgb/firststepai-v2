@@ -13,16 +13,13 @@ const CTASection = () => (
       >
         <h2 className="text-3xl md:text-4xl lg:text-[3.5rem] font-heading mb-4 leading-[1.05] text-foreground">
           Your confident step into AI,{" "}
-          <span className="text-forest">done for you.</span>
+          <span className="text-teal">done for you.</span>
         </h2>
         <p className="text-muted-foreground text-lg mb-10 max-w-md mx-auto leading-relaxed">
           Book a free, no-pressure consultation and see how AI can simplify your workday.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="mailto:info@firststepai.com.au"
-            className="cta-button"
-          >
+          <a href="mailto:info@firststepai.com.au" className="cta-button">
             Book your free consultation
             <ArrowUpRight size={15} />
           </a>

@@ -35,21 +35,17 @@ const WhoIsForSection = () => (
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{
-                duration: 0.5,
-                delay: i * 0.1,
-                ease: [0.25, 0.1, 0.25, 1],
-              }}
+              transition={{ duration: 0.5, delay: i * 0.1, ease: [0.25, 0.1, 0.25, 1] }}
               className="group editorial-card px-6 py-5"
             >
               <div className="flex items-start gap-4">
-                <div className="w-6 h-6 rounded-full bg-forest-light flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-forest group-hover:text-primary-foreground transition-all duration-500">
-                  <Check size={13} />
+                <div className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-teal group-hover:text-navy transition-all duration-500"
+                  style={{ background: 'rgba(0, 166, 166, 0.1)' }}
+                >
+                  <Check size={13} className="text-teal group-hover:text-navy" />
                 </div>
                 <div>
-                  <p className="text-[15px] md:text-base font-medium leading-relaxed text-foreground mb-1">
-                    {point.text}
-                  </p>
+                  <p className="text-[15px] md:text-base font-medium leading-relaxed text-foreground mb-1">{point.text}</p>
                   <p className="text-sm text-muted-foreground leading-relaxed opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-20 transition-all duration-500">
                     {point.detail}
                   </p>
