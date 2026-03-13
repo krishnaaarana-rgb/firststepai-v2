@@ -202,15 +202,18 @@ const CaseStudiesSection = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="mt-10 text-center"
+          transition={{ delay: 0.3, duration: 0.5 }}
+          className="mt-14 text-center"
         >
-          <a href="/contact" className="inline-flex items-center gap-2 text-sm font-heading font-semibold text-teal hover:gap-3 transition-all duration-300">
+          <a
+            href="/contact"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-secondary to-primary text-primary-foreground font-heading font-semibold text-base shadow-glow-teal hover:shadow-[0_0_30px_rgba(0,166,166,0.5)] hover:gap-4 transition-all duration-300"
+          >
             Want results like these? Let's talk
-            <ArrowUpRight size={15} />
+            <ArrowUpRight size={18} />
           </a>
         </motion.div>
       </div>
