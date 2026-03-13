@@ -112,7 +112,7 @@ const CaseStudiesSection = () => {
               }`}
               style={activeStudy !== i ? { background: 'rgba(27, 73, 101, 0.2)' } : undefined}
             >
-              {cs.client}
+              {cs.badge}
             </button>
           ))}
         </motion.div>
