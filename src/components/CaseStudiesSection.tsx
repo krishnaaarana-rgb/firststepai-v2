@@ -4,20 +4,20 @@ import { useState } from "react";
 
 const caseStudies = [
   {
-    id: 1, badge: "Hospitality", client: "Darling Harbour Café Group", location: "Sydney, NSW",
-    challenge: "Managing 3 café locations with paper-based inventory, manual staff scheduling, and zero digital marketing. Losing 15+ hours/week on admin tasks the owner could automate.",
-    solution: "Implemented AI-powered inventory forecasting, automated roster scheduling with demand prediction, and set up an AI content assistant for social media across all 3 locations.",
-    tools: ["AI Inventory Forecaster", "Smart Scheduling", "Content AI"],
+    id: 1, badge: "Mortgage Broking", client: "BVHL", location: "Sydney, NSW",
+    challenge: "Processing discovery calls manually, re-keying client data into Mercury CRM, chasing documents via email, and categorising bank statement expenses by hand. Brokers spending 3+ hours per client on admin before even starting the loan application.",
+    solution: "Built a full client management portal with AI-powered transcript extraction, automated document processing (ID, payslips, bank statements), intelligent expense categorisation, and one-click push to Mercury CRM with complete contact, employment, and identification data.",
+    tools: ["AI Transcript Extraction", "Smart Doc Processing", "Mercury CRM Sync"],
     results: [
-      { icon: Clock, metric: "18 hrs/week", label: "Time saved on admin" },
-      { icon: DollarSign, metric: "$2,400/mo", label: "Reduced food waste" },
-      { icon: TrendingUp, metric: "3x", label: "Social media output" },
+      { icon: Clock, metric: "3+ hrs/client", label: "Time saved on data entry" },
+      { icon: TrendingUp, metric: "85%", label: "Fields auto-filled from one call" },
+      { icon: DollarSign, metric: "$3K–$5K", label: "Total project cost (AUD)" },
     ],
-    quote: "I went from drowning in spreadsheets to actually having time to be in the café with my team. It felt like hiring 2 extra staff.",
-    quoteName: "Maria S., Owner", timeline: "3 days setup · 1 day training",
+    quote: "What used to take me half a day per client now happens in minutes. The AI pulls everything from the call, the docs get processed automatically, and I just review and push to Mercury. It's completely changed how I onboard clients.",
+    quoteName: "James S., BVHL", timeline: "4 weeks build · Ongoing support",
   },
   {
-    id: 2, badge: "Professional Services", client: "Northshore Accounting", location: "Chatswood, NSW",
+    id: 2, badge: "Professional Services", client: "NSA", location: "Chatswood, NSW",
     challenge: "A 6-person accounting firm spending 20+ hours weekly on email replies, document sorting, and client onboarding. Staff frustrated with repetitive tasks during tax season.",
     solution: "Deployed AI email triage and auto-drafting, intelligent document categorization, and an AI-powered client onboarding flow that pre-fills forms from uploaded documents.",
     tools: ["Email AI Assistant", "Document Classifier", "Smart Onboarding"],
@@ -30,7 +30,7 @@ const caseStudies = [
     quoteName: "David L., Director", timeline: "2 days setup · half day training",
   },
   {
-    id: 3, badge: "Trades & Services", client: "BrightSpark Electrical", location: "Parramatta, NSW",
+    id: 3, badge: "Trades & Services", client: "BSE", location: "Parramatta, NSW",
     challenge: "Solo electrician with 2 apprentices, juggling quote requests via text, handwritten invoices, and no system for follow-ups. Losing jobs because quotes took too long.",
     solution: "Set up AI-assisted quote generation from photos, automated invoice creation, and a smart follow-up system that chases unpaid invoices and re-engages past clients.",
     tools: ["Quote AI", "Auto-Invoicing", "Client Follow-up Bot"],
@@ -43,7 +43,7 @@ const caseStudies = [
     quoteName: "Jake R., Owner", timeline: "1 day setup · 2 hour training",
   },
   {
-    id: 4, badge: "Retail", client: "Bondi Surf Co.", location: "Bondi, NSW",
+    id: 4, badge: "Retail", client: "BSC", location: "Bondi, NSW",
     challenge: "A surf shop with an online store struggling to manage customer enquiries, product descriptions, and social media content. The owner was spending evenings writing product copy and replying to DMs.",
     solution: "Implemented an AI chatbot for customer FAQs, AI-generated product descriptions from photos, and automated social media scheduling with AI-written captions tailored to their brand voice.",
     tools: ["AI Chatbot", "Product Copy AI", "Social Scheduler"],
@@ -56,7 +56,7 @@ const caseStudies = [
     quoteName: "Tom W., Owner", timeline: "2 days setup · 1 day training",
   },
   {
-    id: 5, badge: "Health & Wellness", client: "Zen Physio Collective", location: "Auckland, NZ",
+    id: 5, badge: "Health & Wellness", client: "ZPC", location: "Auckland, NZ",
     challenge: "A physiotherapy clinic with 4 practitioners drowning in appointment admin, patient follow-up emails, and treatment note documentation. Practitioners were staying late every day to finish notes.",
     solution: "Set up AI-powered voice-to-text treatment notes, automated appointment reminders and follow-ups, and an AI assistant that drafts patient exercise plans from consultation summaries.",
     tools: ["Voice-to-Notes AI", "Smart Reminders", "Exercise Plan Generator"],
