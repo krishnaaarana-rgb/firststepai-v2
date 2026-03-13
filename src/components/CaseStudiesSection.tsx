@@ -110,7 +110,7 @@ const CaseStudiesSection = () => {
               Real businesses,{" "}
               <span className="text-forest">real transformations</span>
           </h2>
-          <p className="text-muted-foreground max-w-lg leading-relaxed mt-4">
+          <p className="text-muted-foreground leading-relaxed mt-4 whitespace-nowrap">
               See how we've helped businesses across Australia & New Zealand take their first step into AI, and the results that followed.
           </p>
         </motion.div>

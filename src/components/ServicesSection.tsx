@@ -61,7 +61,7 @@ const ServicesSection = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="text-muted-foreground max-w-lg leading-relaxed mt-4"
+          className="text-muted-foreground leading-relaxed mt-4 whitespace-nowrap"
         >
           We focus on practical, immediate impact. Not complex strategies that take months to see results.
         </motion.p>
