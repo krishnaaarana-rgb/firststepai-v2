@@ -103,7 +103,7 @@
   }
 
   .section-padding {
-    @apply py-24 md:py-32 lg:py-40;
+    @apply py-14 md:py-19 lg:py-24;
   }
 
   .text-balance {
