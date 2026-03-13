@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, TrendingUp, Clock, DollarSign, Users, Star, ShoppingBag } from "lucide-react";
+import { ArrowUpRight, TrendingUp, Clock, DollarSign, Users, Star, Mic, BriefcaseBusiness, BarChart3, Settings } from "lucide-react";
 import { useState } from "react";
 
 const caseStudies = [
@@ -11,7 +11,7 @@ const caseStudies = [
     results: [
       { icon: Clock, metric: "3+ hrs/client", label: "Time saved on data entry" },
       { icon: TrendingUp, metric: "85%", label: "Fields auto-filled from one call" },
-      { icon: DollarSign, metric: "$3K–$5K", label: "Total project cost (AUD)" },
+      { icon: DollarSign, metric: "~$3K–$5K", label: "Approx. build cost (AUD)" },
     ],
     quote: "What used to take me half a day per client now happens in minutes. The AI pulls everything from the call, the docs get processed automatically, and I just review and push to Mercury. It's completely changed how I onboard clients.",
     quoteName: "James S., BVHL", timeline: "4 weeks build · Ongoing support",
@@ -24,49 +24,62 @@ const caseStudies = [
     results: [
       { icon: Clock, metric: "22 hrs/week", label: "Team time reclaimed" },
       { icon: Users, metric: "40%", label: "Faster client onboarding" },
-      { icon: Star, metric: "98%", label: "Staff satisfaction" },
+      { icon: DollarSign, metric: "~$2K–$4K", label: "Approx. build cost (AUD)" },
     ],
     quote: "Tax season used to destroy us. This year, my team actually left on time. That's never happened before.",
-    quoteName: "David L., Director", timeline: "2 days setup · half day training",
+    quoteName: "David L., Director", timeline: "2 weeks build · half day training",
   },
   {
-    id: 3, badge: "Trades & Services", client: "BSE", location: "Parramatta, NSW",
-    challenge: "Solo electrician with 2 apprentices, juggling quote requests via text, handwritten invoices, and no system for follow-ups. Losing jobs because quotes took too long.",
-    solution: "Set up AI-assisted quote generation from photos, automated invoice creation, and a smart follow-up system that chases unpaid invoices and re-engages past clients.",
-    tools: ["Quote AI", "Auto-Invoicing", "Client Follow-up Bot"],
+    id: 3, badge: "Sales & Outreach", client: "VQS", location: "Melbourne, VIC",
+    challenge: "A B2B sales team manually qualifying inbound leads via phone, spending 45+ minutes per prospect on research, and losing deals because follow-ups fell through the cracks. No structured pipeline beyond a shared spreadsheet.",
+    solution: "Deployed an AI voice agent that qualifies leads in under 3 minutes, auto-enriches prospect data from Apollo and LinkedIn, books meetings directly into calendars, and sends personalised follow-up sequences — all without human intervention.",
+    tools: ["Voice AI Agent", "Lead Enrichment", "Auto Follow-up"],
     results: [
-      { icon: DollarSign, metric: "35%", label: "More quotes won" },
-      { icon: Clock, metric: "10 hrs/week", label: "Admin time eliminated" },
-      { icon: TrendingUp, metric: "28%", label: "Revenue increase" },
+      { icon: Mic, metric: "3 min", label: "Lead-to-booking pipeline" },
+      { icon: TrendingUp, metric: "3x", label: "Conversion rate increase" },
+      { icon: DollarSign, metric: "~$4K–$7K", label: "Approx. build cost (AUD)" },
     ],
-    quote: "I'm an electrician, not an office worker. Now my phone does the admin and I do what I'm good at.",
-    quoteName: "Jake R., Owner", timeline: "1 day setup · 2 hour training",
+    quote: "The voice agent qualifies leads faster than my best rep. We went from chasing prospects to having a full calendar within the first week.",
+    quoteName: "Mark T., Sales Director", timeline: "3 weeks build · Ongoing support",
   },
   {
-    id: 4, badge: "Retail", client: "BSC", location: "Bondi, NSW",
-    challenge: "A surf shop with an online store struggling to manage customer enquiries, product descriptions, and social media content. The owner was spending evenings writing product copy and replying to DMs.",
-    solution: "Implemented an AI chatbot for customer FAQs, AI-generated product descriptions from photos, and automated social media scheduling with AI-written captions tailored to their brand voice.",
-    tools: ["AI Chatbot", "Product Copy AI", "Social Scheduler"],
+    id: 4, badge: "Recruitment & HR", client: "THP", location: "Brisbane, QLD",
+    challenge: "An agency receiving 200+ applications per role, with recruiters spending 6+ hours per listing manually screening resumes, watching intro videos, and coordinating interview schedules. Top candidates were slipping through due to slow response times.",
+    solution: "Built an AI hiring pipeline that auto-screens resumes against job criteria, evaluates candidate video introductions using AI analysis, scores and ranks applicants, and assigns interviewers via intelligent round-robin — all triggered automatically on application.",
+    tools: ["AI Resume Screening", "Video Analysis", "Smart Scheduling"],
     results: [
-      { icon: ShoppingBag, metric: "45%", label: "Faster product listings" },
-      { icon: Clock, metric: "12 hrs/week", label: "Time saved on content" },
-      { icon: TrendingUp, metric: "22%", label: "Online sales increase" },
+      { icon: Clock, metric: "90%", label: "Reduction in screening time" },
+      { icon: BriefcaseBusiness, metric: "24 hrs", label: "Time to first interview" },
+      { icon: DollarSign, metric: "~$3K–$6K", label: "Approx. build cost (AUD)" },
     ],
-    quote: "I used to dread writing product descriptions. Now I snap a photo and the AI nails it every time. My evenings are mine again.",
-    quoteName: "Tom W., Owner", timeline: "2 days setup · 1 day training",
+    quote: "We used to take a week to shortlist. Now the AI does it overnight, and the quality of candidates reaching interview stage has actually improved.",
+    quoteName: "Sarah K., Head of Talent", timeline: "3 weeks build · 1 day training",
   },
   {
-    id: 5, badge: "Health & Wellness", client: "ZPC", location: "Auckland, NZ",
-    challenge: "A physiotherapy clinic with 4 practitioners drowning in appointment admin, patient follow-up emails, and treatment note documentation. Practitioners were staying late every day to finish notes.",
-    solution: "Set up AI-powered voice-to-text treatment notes, automated appointment reminders and follow-ups, and an AI assistant that drafts patient exercise plans from consultation summaries.",
-    tools: ["Voice-to-Notes AI", "Smart Reminders", "Exercise Plan Generator"],
+    id: 5, badge: "Marketing & Content", client: "AMS", location: "Perth, WA",
+    challenge: "A growing agency producing ad copy, blog posts, product photography, and social content for 12+ clients. The creative team was stretched thin, missing deadlines, and outsourcing was eating into margins.",
+    solution: "Implemented a multi-agent AI marketing system that generates ad copy, creates product visuals, writes long-form blog content, and produces short-form video — all calibrated to each client's brand voice and style guidelines.",
+    tools: ["AI Copywriter", "Visual Generator", "Video Automation"],
     results: [
-      { icon: Clock, metric: "15 hrs/week", label: "Admin time saved" },
-      { icon: Users, metric: "30%", label: "Fewer no-shows" },
-      { icon: Star, metric: "4.9★", label: "Google review average" },
+      { icon: BarChart3, metric: "10x", label: "Content output increase" },
+      { icon: Clock, metric: "15 hrs/week", label: "Creative time saved" },
+      { icon: DollarSign, metric: "~$5K–$8K", label: "Approx. build cost (AUD)" },
     ],
-    quote: "My practitioners actually finish on time now. The voice-to-notes tool alone was worth it. It captures everything we need in seconds.",
-    quoteName: "Dr. Lena M., Director", timeline: "2 days setup · half day training",
+    quote: "We went from producing 20 pieces of content a week to over 200. The AI handles the volume, and my team focuses on strategy and client relationships.",
+    quoteName: "Nina P., Agency Director", timeline: "4 weeks build · Ongoing support",
+  },
+  {
+    id: 6, badge: "Operations & CRM", client: "GCP", location: "Gold Coast, QLD",
+    challenge: "A service business running client acquisition, onboarding, and retention across disconnected tools — spreadsheets for leads, email for onboarding, and no nurture system. Clients were churning because nothing was automated post-sale.",
+    solution: "Built a complete GoHighLevel pipeline system covering lead capture, automated onboarding sequences, milestone-based check-ins, and long-term nurture campaigns — all connected to Stripe for billing and Notion for internal visibility.",
+    tools: ["GHL Pipeline", "Auto-Onboarding", "Retention Engine"],
+    results: [
+      { icon: TrendingUp, metric: "3x", label: "Client conversion rate" },
+      { icon: Settings, metric: "80%", label: "Less manual follow-up" },
+      { icon: DollarSign, metric: "~$3K–$5K", label: "Approx. build cost (AUD)" },
+    ],
+    quote: "Before this, clients would sign up and then hear nothing for weeks. Now the whole journey is automated — and our retention has never been better.",
+    quoteName: "Daniel R., Founder", timeline: "3 weeks build · Ongoing support",
   },
 ];
 
@@ -174,6 +187,10 @@ const CaseStudiesSection = () => {
                 </motion.div>
               ))}
             </div>
+
+            <p className="text-[11px] text-muted-foreground/60 italic mb-10">
+              * All costs are approximate and vary based on project complexity, integrations, and scope. Figures shown in AUD.
+            </p>
 
             <div className="border-l-2 border-teal pl-6 py-2">
               <blockquote className="text-foreground text-lg md:text-xl font-medium leading-relaxed italic mb-3">
