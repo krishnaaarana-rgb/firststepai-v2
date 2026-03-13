@@ -12,10 +12,15 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Inter', 'system-ui', 'sans-serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
+        navy: { DEFAULT: '#0D1B2A', light: '#132538', dark: '#080F18' },
+        steel: { DEFAULT: '#1B4965', light: '#2A6A8E', dark: '#13354A' },
+        teal: { DEFAULT: '#00A6A6', light: '#33B8B8', dark: '#008585' },
+        "off-white": { DEFAULT: '#F9F9F6', dim: '#EDEDEA' },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -49,18 +54,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        forest: {
-          DEFAULT: "hsl(var(--forest))",
-          light: "hsl(var(--forest-light))",
-          deep: "hsl(var(--forest-deep))",
-        },
-        terracotta: {
-          DEFAULT: "hsl(var(--terracotta))",
-          light: "hsl(var(--terracotta-light))",
-        },
-        sand: "hsl(var(--sand))",
-        ink: "hsl(var(--ink))",
-        sage: "hsl(var(--sage))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -76,6 +69,16 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        'glow-teal': '0 0 20px rgba(0, 166, 166, 0.3)',
+        'glow-steel': '0 0 20px rgba(27, 73, 101, 0.3)',
+      },
+      backgroundImage: {
+        'gradient-accent': 'linear-gradient(135deg, #1B4965, #00A6A6)',
+        'gradient-hero': 'linear-gradient(180deg, #080F18 0%, #0D1B2A 100%)',
+        'gradient-card': 'linear-gradient(145deg, rgba(27, 73, 101, 0.1), rgba(0, 166, 166, 0.05))',
+        'gradient-text': 'linear-gradient(90deg, #F9F9F6, #00A6A6)',
       },
       keyframes: {
         "accordion-down": {

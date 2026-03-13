@@ -2,25 +2,13 @@ import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
 const testimonials = [
-  {
-    quote: "First Step AI made something that felt impossible feel completely doable. Within a week, our team was using AI tools daily.",
-    name: "Sarah M.",
-    role: "Café Owner, Sydney",
-  },
-  {
-    quote: "I'd been putting off AI for months. They came in, set everything up, and trained my staff in an afternoon. Game changer.",
-    name: "James T.",
-    role: "Property Manager",
-  },
-  {
-    quote: "No jargon, no pressure, just real help. They understood that we needed simple, not complicated.",
-    name: "Priya K.",
-    role: "Accounting Firm Director",
-  },
+  { quote: "First Step AI made something that felt impossible feel completely doable. Within a week, our team was using AI tools daily.", name: "Sarah M.", role: "Café Owner, Sydney" },
+  { quote: "I'd been putting off AI for months. They came in, set everything up, and trained my staff in an afternoon. Game changer.", name: "James T.", role: "Property Manager" },
+  { quote: "No jargon, no pressure, just real help. They understood that we needed simple, not complicated.", name: "Priya K.", role: "Accounting Firm Director" },
 ];
 
 const TestimonialsSection = () => (
-  <section className="section-padding bg-secondary/50">
+  <section className="section-padding" style={{ background: 'rgba(27, 73, 101, 0.1)' }}>
     <div className="container-wide">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
@@ -47,13 +35,13 @@ const TestimonialsSection = () => (
           >
             <div className="flex gap-1 mb-5">
               {[...Array(5)].map((_, j) => (
-                <Star key={j} size={14} className="fill-terracotta text-terracotta" />
+                <Star key={j} size={14} className="fill-teal text-teal" />
               ))}
             </div>
             <blockquote className="text-foreground leading-relaxed text-[15px] mb-8 flex-1">
               "{t.quote}"
             </blockquote>
-            <div className="border-t border-border pt-5 mt-auto">
+            <div className="border-t pt-5 mt-auto" style={{ borderColor: 'rgba(27, 73, 101, 0.3)' }}>
               <p className="font-heading font-semibold text-sm">{t.name}</p>
               <p className="text-xs text-muted-foreground mt-0.5">{t.role}</p>
             </div>

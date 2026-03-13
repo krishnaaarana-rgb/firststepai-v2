@@ -7,10 +7,10 @@ const LocationBanner = () => (
     whileInView={{ opacity: 1 }}
     viewport={{ once: true }}
     transition={{ duration: 0.6 }}
-    className="border-y border-border"
+    style={{ borderTop: '1px solid rgba(27, 73, 101, 0.3)', borderBottom: '1px solid rgba(27, 73, 101, 0.3)' }}
   >
     <div className="container-wide py-10 md:py-12 flex flex-col md:flex-row items-center justify-center gap-4 text-center">
-      <MapPin className="w-5 h-5 text-forest shrink-0" />
+      <MapPin className="w-5 h-5 text-teal shrink-0" />
       <p className="text-sm md:text-base text-muted-foreground">
         Supporting <span className="font-medium text-foreground">Australia & New Zealand</span> based businesses with hands-on AI implementation and training.
       </p>

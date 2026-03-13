@@ -23,7 +23,6 @@ const AboutSection = () => {
     <section id="about" className="section-padding overflow-hidden aurora-bg noise-overlay">
       <div className="container-wide relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left - copy */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +33,7 @@ const AboutSection = () => {
             <span className="badge mb-2 block w-fit">About us</span>
             <h2 className="text-3xl md:text-4xl lg:text-[3.2rem] font-heading leading-[1.05]">
               We've been in{" "}
-              <span className="text-forest">your shoes.</span>
+              <span className="text-teal">your shoes.</span>
             </h2>
             <p className="text-foreground text-lg md:text-xl font-heading font-medium leading-relaxed italic">
               At First Step AI, we exist because learning AI shouldn't be a solo journey.
@@ -51,7 +50,6 @@ const AboutSection = () => {
             </p>
           </motion.div>
 
-          {/* Right - interactive rotating card */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -60,7 +58,7 @@ const AboutSection = () => {
             className="lg:col-span-5 flex justify-center"
           >
             <div className="w-full max-w-sm">
-              <div className="rounded-2xl border border-border/60 bg-card/50 backdrop-blur-sm p-8 shadow-lg">
+              <div className="glow-card p-8">
                 <p className="text-xs uppercase tracking-widest text-muted-foreground mb-5 font-medium">What we believe</p>
                 <div className="relative h-16 overflow-hidden">
                   <AnimatePresence mode="wait">
@@ -81,7 +79,7 @@ const AboutSection = () => {
                   {beliefs.map((_, i) => (
                     <div
                       key={i}
-                      className={`h-1 rounded-full transition-all duration-300 ${i === currentIndex ? "w-6 bg-forest" : "w-1.5 bg-border"}`}
+                      className={`h-1 rounded-full transition-all duration-300 ${i === currentIndex ? "w-6 bg-teal" : "w-1.5 bg-steel/30"}`}
                     />
                   ))}
                 </div>

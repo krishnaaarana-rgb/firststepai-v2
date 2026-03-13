@@ -4,10 +4,7 @@ import { useState } from "react";
 
 const caseStudies = [
   {
-    id: 1,
-    badge: "Hospitality",
-    client: "Darling Harbour Café Group",
-    location: "Sydney, NSW",
+    id: 1, badge: "Hospitality", client: "Darling Harbour Café Group", location: "Sydney, NSW",
     challenge: "Managing 3 café locations with paper-based inventory, manual staff scheduling, and zero digital marketing. Losing 15+ hours/week on admin tasks the owner could automate.",
     solution: "Implemented AI-powered inventory forecasting, automated roster scheduling with demand prediction, and set up an AI content assistant for social media across all 3 locations.",
     tools: ["AI Inventory Forecaster", "Smart Scheduling", "Content AI"],
@@ -17,14 +14,10 @@ const caseStudies = [
       { icon: TrendingUp, metric: "3x", label: "Social media output" },
     ],
     quote: "I went from drowning in spreadsheets to actually having time to be in the café with my team. It felt like hiring 2 extra staff.",
-    quoteName: "Maria S., Owner",
-    timeline: "3 days setup · 1 day training",
+    quoteName: "Maria S., Owner", timeline: "3 days setup · 1 day training",
   },
   {
-    id: 2,
-    badge: "Professional Services",
-    client: "Northshore Accounting",
-    location: "Chatswood, NSW",
+    id: 2, badge: "Professional Services", client: "Northshore Accounting", location: "Chatswood, NSW",
     challenge: "A 6-person accounting firm spending 20+ hours weekly on email replies, document sorting, and client onboarding. Staff frustrated with repetitive tasks during tax season.",
     solution: "Deployed AI email triage and auto-drafting, intelligent document categorization, and an AI-powered client onboarding flow that pre-fills forms from uploaded documents.",
     tools: ["Email AI Assistant", "Document Classifier", "Smart Onboarding"],
@@ -34,14 +27,10 @@ const caseStudies = [
       { icon: Star, metric: "98%", label: "Staff satisfaction" },
     ],
     quote: "Tax season used to destroy us. This year, my team actually left on time. That's never happened before.",
-    quoteName: "David L., Director",
-    timeline: "2 days setup · half day training",
+    quoteName: "David L., Director", timeline: "2 days setup · half day training",
   },
   {
-    id: 3,
-    badge: "Trades & Services",
-    client: "BrightSpark Electrical",
-    location: "Parramatta, NSW",
+    id: 3, badge: "Trades & Services", client: "BrightSpark Electrical", location: "Parramatta, NSW",
     challenge: "Solo electrician with 2 apprentices, juggling quote requests via text, handwritten invoices, and no system for follow-ups. Losing jobs because quotes took too long.",
     solution: "Set up AI-assisted quote generation from photos, automated invoice creation, and a smart follow-up system that chases unpaid invoices and re-engages past clients.",
     tools: ["Quote AI", "Auto-Invoicing", "Client Follow-up Bot"],
@@ -51,14 +40,10 @@ const caseStudies = [
       { icon: TrendingUp, metric: "28%", label: "Revenue increase" },
     ],
     quote: "I'm an electrician, not an office worker. Now my phone does the admin and I do what I'm good at.",
-    quoteName: "Jake R., Owner",
-    timeline: "1 day setup · 2 hour training",
+    quoteName: "Jake R., Owner", timeline: "1 day setup · 2 hour training",
   },
   {
-    id: 4,
-    badge: "Retail",
-    client: "Bondi Surf Co.",
-    location: "Bondi, NSW",
+    id: 4, badge: "Retail", client: "Bondi Surf Co.", location: "Bondi, NSW",
     challenge: "A surf shop with an online store struggling to manage customer enquiries, product descriptions, and social media content. The owner was spending evenings writing product copy and replying to DMs.",
     solution: "Implemented an AI chatbot for customer FAQs, AI-generated product descriptions from photos, and automated social media scheduling with AI-written captions tailored to their brand voice.",
     tools: ["AI Chatbot", "Product Copy AI", "Social Scheduler"],
@@ -68,14 +53,10 @@ const caseStudies = [
       { icon: TrendingUp, metric: "22%", label: "Online sales increase" },
     ],
     quote: "I used to dread writing product descriptions. Now I snap a photo and the AI nails it every time. My evenings are mine again.",
-    quoteName: "Tom W., Owner",
-    timeline: "2 days setup · 1 day training",
+    quoteName: "Tom W., Owner", timeline: "2 days setup · 1 day training",
   },
   {
-    id: 5,
-    badge: "Health & Wellness",
-    client: "Zen Physio Collective",
-    location: "Auckland, NZ",
+    id: 5, badge: "Health & Wellness", client: "Zen Physio Collective", location: "Auckland, NZ",
     challenge: "A physiotherapy clinic with 4 practitioners drowning in appointment admin, patient follow-up emails, and treatment note documentation. Practitioners were staying late every day to finish notes.",
     solution: "Set up AI-powered voice-to-text treatment notes, automated appointment reminders and follow-ups, and an AI assistant that drafts patient exercise plans from consultation summaries.",
     tools: ["Voice-to-Notes AI", "Smart Reminders", "Exercise Plan Generator"],
@@ -85,8 +66,7 @@ const caseStudies = [
       { icon: Star, metric: "4.9★", label: "Google review average" },
     ],
     quote: "My practitioners actually finish on time now. The voice-to-notes tool alone was worth it. It captures everything we need in seconds.",
-    quoteName: "Dr. Lena M., Director",
-    timeline: "2 days setup · half day training",
+    quoteName: "Dr. Lena M., Director", timeline: "2 days setup · half day training",
   },
 ];
 
@@ -97,7 +77,6 @@ const CaseStudiesSection = () => {
   return (
     <section id="cases" className="section-padding relative aurora-bg noise-overlay">
       <div className="container-wide relative z-10">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -107,15 +86,14 @@ const CaseStudiesSection = () => {
         >
           <span className="badge mb-4 block w-fit">Case Studies</span>
           <h2 className="text-3xl md:text-4xl lg:text-[3.5rem] font-heading" style={{ wordBreak: "keep-all" }}>
-              Real businesses,{" "}
-              <span className="text-forest">real transformations</span>
+            Real businesses,{" "}
+            <span className="text-teal">real transformations</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed mt-4 whitespace-nowrap">
-              See how we've helped businesses across Australia & New Zealand take their first step into AI, and the results that followed.
+            See how we've helped businesses across Australia & New Zealand take their first step into AI, and the results that followed.
           </p>
         </motion.div>
 
-        {/* Case study selector tabs */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -129,16 +107,16 @@ const CaseStudiesSection = () => {
               onClick={() => setActiveStudy(i)}
               className={`shrink-0 px-5 py-2.5 rounded-full text-sm font-heading font-medium transition-all duration-300 ${
                 activeStudy === i
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-muted-foreground hover:text-foreground"
+                  ? "bg-teal text-navy"
+                  : "text-muted-foreground hover:text-foreground"
               }`}
+              style={activeStudy !== i ? { background: 'rgba(27, 73, 101, 0.2)' } : undefined}
             >
               {cs.client}
             </button>
           ))}
         </motion.div>
 
-        {/* Active case study */}
         <motion.div
           key={study.id}
           initial={{ opacity: 0, y: 20 }}
@@ -147,42 +125,37 @@ const CaseStudiesSection = () => {
           className="glow-card"
         >
           <div className="p-6 md:p-10 lg:p-12">
-            {/* Top bar */}
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <span className="badge">{study.badge}</span>
               <span className="text-xs text-muted-foreground">📍 {study.location}</span>
               <span className="text-xs text-muted-foreground ml-auto">⏱ {study.timeline}</span>
             </div>
 
-            {/* Client name */}
             <h3 className="text-2xl md:text-3xl font-heading font-bold mb-8">{study.client}</h3>
 
-            {/* Challenge / Solution grid */}
             <div className="grid md:grid-cols-2 gap-8 mb-10">
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 rounded-full bg-accent" />
+                  <div className="w-2 h-2 rounded-full bg-teal" />
                   <h4 className="text-xs font-heading font-semibold uppercase tracking-widest text-muted-foreground">The Challenge</h4>
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-[15px]">{study.challenge}</p>
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 rounded-full bg-forest" />
+                  <div className="w-2 h-2 rounded-full bg-teal" />
                   <h4 className="text-xs font-heading font-semibold uppercase tracking-widest text-muted-foreground">Our Solution</h4>
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-[15px]">{study.solution}</p>
               </div>
             </div>
 
-            {/* Tools used */}
             <div className="flex flex-wrap gap-2 mb-10">
               {study.tools.map((tool) => (
                 <span key={tool} className="metric-pill text-xs">{tool}</span>
               ))}
             </div>
 
-            {/* Results metrics */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
               {study.results.map((result, i) => (
                 <motion.div
@@ -191,9 +164,9 @@ const CaseStudiesSection = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
                   className="relative rounded-xl p-5 text-center overflow-hidden"
-                  style={{ background: "hsl(var(--forest-light))" }}
+                  style={{ background: 'rgba(0, 166, 166, 0.08)' }}
                 >
-                  <result.icon className="w-5 h-5 text-forest mx-auto mb-2" />
+                  <result.icon className="w-5 h-5 text-teal mx-auto mb-2" />
                   <div className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-1">
                     {result.metric}
                   </div>
@@ -202,8 +175,7 @@ const CaseStudiesSection = () => {
               ))}
             </div>
 
-            {/* Quote */}
-            <div className="border-l-2 border-forest pl-6 py-2">
+            <div className="border-l-2 border-teal pl-6 py-2">
               <blockquote className="text-foreground text-lg md:text-xl font-medium leading-relaxed italic mb-3">
                 "{study.quote}"
               </blockquote>
@@ -212,7 +184,6 @@ const CaseStudiesSection = () => {
           </div>
         </motion.div>
 
-        {/* View all link */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -220,7 +191,7 @@ const CaseStudiesSection = () => {
           transition={{ delay: 0.3 }}
           className="mt-10 text-center"
         >
-          <a href="/contact" className="inline-flex items-center gap-2 text-sm font-heading font-semibold text-forest hover:gap-3 transition-all duration-300">
+          <a href="/contact" className="inline-flex items-center gap-2 text-sm font-heading font-semibold text-teal hover:gap-3 transition-all duration-300">
             Want results like these? Let's talk
             <ArrowUpRight size={15} />
           </a>
