@@ -26,7 +26,7 @@ const ServicesSection = () => (
         >
           <span className="badge mb-4 block w-fit">Services</span>
           <h2 className="text-3xl md:text-4xl lg:text-[3.5rem] font-heading whitespace-nowrap" style={{ wordBreak: "keep-all" }}>
-            How we help your business
+            How we <span className="gradient-text">help you.</span>
           </h2>
         </motion.div>
         <motion.p
